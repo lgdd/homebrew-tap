@@ -5,20 +5,20 @@
 class LiferayCli < Formula
   desc "Liferay CLI (lfr) is an unofficial tool written in Go that helps you create & manage your Liferay projects."
   homepage "https://github.com/lgdd/liferay-cli"
-  version "1.0.0"
+  version "1.1.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/lgdd/liferay-cli/releases/download/v1.0.0/liferay-cli_1.0.0_darwin_arm64.tar.gz"
-      sha256 "15f2ee9e1a31ef4a078c882e430db6dc7ce1777bbdc53a1c25db2d9643bae8d6"
+    if Hardware::CPU.intel?
+      url "https://github.com/lgdd/liferay-cli/releases/download/v1.1.0/liferay-cli_1.1.0_darwin_amd64.tar.gz"
+      sha256 "70f0edd8d1bbce4f0d14a937e4de4adfb1bf0df86e05c4dc2e9292f7036a57f4"
 
       def install
         bin.install "lfr"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/lgdd/liferay-cli/releases/download/v1.0.0/liferay-cli_1.0.0_darwin_amd64.tar.gz"
-      sha256 "756d9bdfa63f7c265e06151911a53629831a7c1b0e25a8ec85998f5e7c9b10a8"
+    if Hardware::CPU.arm?
+      url "https://github.com/lgdd/liferay-cli/releases/download/v1.1.0/liferay-cli_1.1.0_darwin_arm64.tar.gz"
+      sha256 "e6dfa275d2f9403215ec43048302dc0a1cec0af164fe56accca61be250b4b015"
 
       def install
         bin.install "lfr"
@@ -28,16 +28,16 @@ class LiferayCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lgdd/liferay-cli/releases/download/v1.0.0/liferay-cli_1.0.0_linux_arm64.tar.gz"
-      sha256 "613875d74f9688f149e21d0cb0d20e25577965d1b4b403482441133266c361ef"
+      url "https://github.com/lgdd/liferay-cli/releases/download/v1.1.0/liferay-cli_1.1.0_linux_arm64.tar.gz"
+      sha256 "ac91f32e862fbcb52e3e0444f47c5d7ed9f33f4e75dbf03c4cf6cf8a7ac8a6ea"
 
       def install
         bin.install "lfr"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/lgdd/liferay-cli/releases/download/v1.0.0/liferay-cli_1.0.0_linux_amd64.tar.gz"
-      sha256 "1cdf6f2d4649171bf1337e7dacd75db13f7e7e777593e3ee325d2ab895ca26f6"
+      url "https://github.com/lgdd/liferay-cli/releases/download/v1.1.0/liferay-cli_1.1.0_linux_amd64.tar.gz"
+      sha256 "7db4affb8a1054118aa14cb41180f65348cf507b692f728944cd3210b2c4c120"
 
       def install
         bin.install "lfr"
