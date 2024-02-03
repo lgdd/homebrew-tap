@@ -5,20 +5,20 @@
 class LiferayCli < Formula
   desc "Liferay CLI (lfr) is an unofficial tool written in Go that helps you create & manage your Liferay projects."
   homepage "https://github.com/lgdd/liferay-cli"
-  version "1.2.0"
+  version "1.3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/lgdd/liferay-cli/releases/download/v1.2.0/liferay-cli_1.2.0_darwin_amd64.tar.gz"
-      sha256 "ff06de9136393ae5c75b2a5f76f5fe578089f4cbb5a9623c57b7278ac75f0342"
+      url "https://github.com/lgdd/liferay-cli/releases/download/v1.3.0/liferay-cli_1.3.0_darwin_amd64.tar.gz"
+      sha256 "4210e40f6f9d7cc5bf5999c73daba42b1afcdd2da69e35b4b74b6c4c99d65131"
 
       def install
         bin.install "lfr"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/lgdd/liferay-cli/releases/download/v1.2.0/liferay-cli_1.2.0_darwin_arm64.tar.gz"
-      sha256 "204daee87cb698130f7ab4e4beeee6551dd3685e0a19e2d7cc522c22b869c679"
+      url "https://github.com/lgdd/liferay-cli/releases/download/v1.3.0/liferay-cli_1.3.0_darwin_arm64.tar.gz"
+      sha256 "ff02b8a1c966fbd9a9bc07e124ae5fba4e708c4ece9a1e41b457ae0f52c0887a"
 
       def install
         bin.install "lfr"
@@ -27,17 +27,17 @@ class LiferayCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lgdd/liferay-cli/releases/download/v1.2.0/liferay-cli_1.2.0_linux_arm64.tar.gz"
-      sha256 "19bd5efc533e2f919ec263eff13096ee673368fafc7568e1bb05f6649b4db555"
+    if Hardware::CPU.intel?
+      url "https://github.com/lgdd/liferay-cli/releases/download/v1.3.0/liferay-cli_1.3.0_linux_amd64.tar.gz"
+      sha256 "8a05a6672d7538eac3e2b8fbb3dac005f6e022c93d2ed4fa04dc3a5b060cba52"
 
       def install
         bin.install "lfr"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/lgdd/liferay-cli/releases/download/v1.2.0/liferay-cli_1.2.0_linux_amd64.tar.gz"
-      sha256 "7427ea17b19550dc2f9f86bb27a9f1fd8fcc4be5ba882da8239b4908c23bbad2"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/lgdd/liferay-cli/releases/download/v1.3.0/liferay-cli_1.3.0_linux_arm64.tar.gz"
+      sha256 "39d6e1724a4c958e08339af776c29cfd960296b11484ee4d811c429d7b014b65"
 
       def install
         bin.install "lfr"
