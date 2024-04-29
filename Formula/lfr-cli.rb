@@ -5,20 +5,20 @@
 class LfrCli < Formula
   desc "LFR is an unofficial tool written in Go that helps you create & manage your Liferay projects."
   homepage "https://github.com/lgdd/lfr-cli"
-  version "2.0.0"
+  version "3.0.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/lgdd/lfr-cli/releases/download/v2.0.0/lfr-cli_2.0.0_darwin_amd64.tar.gz"
-      sha256 "82b44e825d2caf47345cae3cde7c60d54f704eea023f4a84f4c41c03b9f0bebe"
+      url "https://github.com/lgdd/lfr-cli/releases/download/v3.0.0/lfr-cli_3.0.0_darwin_amd64.tar.gz"
+      sha256 "70ff7bf044ba67483990fc3567369627f0944537789723055ad890970da23811"
 
       def install
         bin.install "lfr"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/lgdd/lfr-cli/releases/download/v2.0.0/lfr-cli_2.0.0_darwin_arm64.tar.gz"
-      sha256 "26b5b75310ec320ba1b70d289eab751528ceb996cf26b7a6b297f286fd523a59"
+      url "https://github.com/lgdd/lfr-cli/releases/download/v3.0.0/lfr-cli_3.0.0_darwin_arm64.tar.gz"
+      sha256 "58ed1fd3a1ae30d357bae590f8c6a30e26935c1b82d38354420a267aeee3e3f6"
 
       def install
         bin.install "lfr"
@@ -28,16 +28,16 @@ class LfrCli < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/lgdd/lfr-cli/releases/download/v2.0.0/lfr-cli_2.0.0_linux_amd64.tar.gz"
-      sha256 "dfdf9e32740fd0318bfae92d21b49716ad5068c107f5e12d5e6ab0d1abb4c26b"
+      url "https://github.com/lgdd/lfr-cli/releases/download/v3.0.0/lfr-cli_3.0.0_linux_amd64.tar.gz"
+      sha256 "b47aa289ebed5f30a3655a0c38e35d4ca3909b78d8a7fbac9337c018d99faa04"
 
       def install
         bin.install "lfr"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lgdd/lfr-cli/releases/download/v2.0.0/lfr-cli_2.0.0_linux_arm64.tar.gz"
-      sha256 "69148c3e107830324a0ae2db9e6cf4de98462cfdfb33428d736689c9966e43bc"
+      url "https://github.com/lgdd/lfr-cli/releases/download/v3.0.0/lfr-cli_3.0.0_linux_arm64.tar.gz"
+      sha256 "34a0410b41112237ce01b66bdfb9c8e9de65996c19ffe1f54e47f8973f0be1d2"
 
       def install
         bin.install "lfr"
