@@ -5,20 +5,20 @@
 class LfrCli < Formula
   desc "LFR is an unofficial tool written in Go that helps you create & manage your Liferay projects."
   homepage "https://github.com/lgdd/lfr-cli"
-  version "3.0.0"
+  version "3.1.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/lgdd/lfr-cli/releases/download/v3.0.0/lfr-cli_3.0.0_darwin_amd64.tar.gz"
-      sha256 "70ff7bf044ba67483990fc3567369627f0944537789723055ad890970da23811"
+    on_intel do
+      url "https://github.com/lgdd/lfr-cli/releases/download/v3.1.0/lfr-cli_3.1.0_darwin_amd64.tar.gz"
+      sha256 "14d25cefbda75e2628bb187750e6ed06124764c450bce024017a97ef5e043525"
 
       def install
         bin.install "lfr"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/lgdd/lfr-cli/releases/download/v3.0.0/lfr-cli_3.0.0_darwin_arm64.tar.gz"
-      sha256 "58ed1fd3a1ae30d357bae590f8c6a30e26935c1b82d38354420a267aeee3e3f6"
+    on_arm do
+      url "https://github.com/lgdd/lfr-cli/releases/download/v3.1.0/lfr-cli_3.1.0_darwin_arm64.tar.gz"
+      sha256 "b81bae86d6621d9ff45b050cb0a8a0f849660e7670f3328bb2629fc7e759caee"
 
       def install
         bin.install "lfr"
@@ -27,20 +27,24 @@ class LfrCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/lgdd/lfr-cli/releases/download/v3.0.0/lfr-cli_3.0.0_linux_amd64.tar.gz"
-      sha256 "b47aa289ebed5f30a3655a0c38e35d4ca3909b78d8a7fbac9337c018d99faa04"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/lgdd/lfr-cli/releases/download/v3.1.0/lfr-cli_3.1.0_linux_amd64.tar.gz"
+        sha256 "ab863e523ee8d23bf11bad8f3fae112b62096d687073d08253d4c0eccefd1fd7"
 
-      def install
-        bin.install "lfr"
+        def install
+          bin.install "lfr"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lgdd/lfr-cli/releases/download/v3.0.0/lfr-cli_3.0.0_linux_arm64.tar.gz"
-      sha256 "34a0410b41112237ce01b66bdfb9c8e9de65996c19ffe1f54e47f8973f0be1d2"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/lgdd/lfr-cli/releases/download/v3.1.0/lfr-cli_3.1.0_linux_arm64.tar.gz"
+        sha256 "54f565e77c02933f729ff1fa1b452bc2ad234df97aab26b0fb8048979ed578e8"
 
-      def install
-        bin.install "lfr"
+        def install
+          bin.install "lfr"
+        end
       end
     end
   end
