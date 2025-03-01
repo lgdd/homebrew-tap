@@ -5,20 +5,20 @@
 class LfrCli < Formula
   desc "LFR is an unofficial tool written in Go that helps you create & manage your Liferay projects."
   homepage "https://github.com/lgdd/lfr-cli"
-  version "3.2.0"
+  version "3.3.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/lgdd/lfr-cli/releases/download/v3.2.0/lfr-cli_3.2.0_darwin_amd64.tar.gz"
-      sha256 "04edcf6000c18c985661837bbdcc441075dc04264e5a44710189069b84409a76"
+      url "https://github.com/lgdd/lfr-cli/releases/download/v3.3.0/lfr-cli_3.3.0_darwin_amd64.tar.gz"
+      sha256 "dce080d5533c70583f7a339a0ab736db4dad1f64cb16d07e9c2bbc35e8083209"
 
       def install
         bin.install "lfr"
       end
     end
     on_arm do
-      url "https://github.com/lgdd/lfr-cli/releases/download/v3.2.0/lfr-cli_3.2.0_darwin_arm64.tar.gz"
-      sha256 "b41fc875cb38174d9564e27f340374bba6ad3cba135d4306b7830826663d4fe5"
+      url "https://github.com/lgdd/lfr-cli/releases/download/v3.3.0/lfr-cli_3.3.0_darwin_arm64.tar.gz"
+      sha256 "5f10410e76eafd4df5b7a084618505fc54fc60d3bcf78cdfdaef3ae40452793d"
 
       def install
         bin.install "lfr"
@@ -29,8 +29,8 @@ class LfrCli < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/lgdd/lfr-cli/releases/download/v3.2.0/lfr-cli_3.2.0_linux_amd64.tar.gz"
-        sha256 "2bd5ea251579a06b34de71fb90ea691e3de387a7ea61ce83286c65ceb5c9e030"
+        url "https://github.com/lgdd/lfr-cli/releases/download/v3.3.0/lfr-cli_3.3.0_linux_amd64.tar.gz"
+        sha256 "1f027b1ebcc0eab4ae9da8e7f9dcbdb0996529fb0c9e7967e5364ea85c64375d"
 
         def install
           bin.install "lfr"
@@ -39,8 +39,8 @@ class LfrCli < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/lgdd/lfr-cli/releases/download/v3.2.0/lfr-cli_3.2.0_linux_arm64.tar.gz"
-        sha256 "e08109c4e9ab068d4152301c87632831825b08b53a9bdf91df02e9b8fe79a93e"
+        url "https://github.com/lgdd/lfr-cli/releases/download/v3.3.0/lfr-cli_3.3.0_linux_arm64.tar.gz"
+        sha256 "3d6b05b423c37cf95993c26a8643df7b0d970ef0e26e4777034d62a3957d2abd"
 
         def install
           bin.install "lfr"
